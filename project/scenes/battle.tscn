@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://project/scripts/combat/battle_controller.gd" id="1_battle"]
+[ext_resource type="Script" path="res://project/scripts/ui/battle_hud.gd" id="2_hud"]
+
+[sub_resource type="Environment" id="Environment_arena"]
+background_mode = 1
+background_color = Color(0.04, 0.05, 0.07, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.45, 0.52, 0.65, 1)
+ambient_light_energy = 0.75
+
+[node name="Battle" type="Node3D"]
+script = ExtResource("1_battle")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 12, 20, 24)
+projection = 1
+current = true
+size = 16.0
+near = 0.05
+far = 100.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.906308, 0.346189, -0.242432, 0, 0.573576, 0.819152, 0.422618, -0.742404, 0.519837, 0, 10, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_arena")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="BattleHUD" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_hud")

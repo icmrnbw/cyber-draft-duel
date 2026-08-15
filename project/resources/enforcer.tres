@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://b0u5d6yxsj0tw" path="res://project/scripts/units/unit_definition.gd" id="1_unitdef"]
+
+[resource]
+script = ExtResource("1_unitdef")
+display_name = "Enforcer"
+type = 0
+description = "Melee bruiser — closes distance fast, hits hard on contact."
+hp = 160.0
+damage_per_hit = 22.0
+attacks_per_second = 1.8181819
+move_speed = 4.5
+preferred_range = 1.5
+retreat_range = 0.0
+body_radius = 0.45
+body_height = 1.9
+accent_color = Color(1, 0.84, 0.2, 1)

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://b0u5d6yxsj0tw" path="res://project/scripts/units/unit_definition.gd" id="1_unitdef"]
+
+[resource]
+script = ExtResource("1_unitdef")
+display_name = "Marksman"
+type = 2
+description = "Long-range sniper — slow, fragile, devastating alpha strikes."
+hp = 70.0
+damage_per_hit = 45.0
+attacks_per_second = 0.7407407
+move_speed = 2.8
+preferred_range = 11.0
+retreat_range = 7.0
+body_radius = 0.3
+body_height = 2.0
+accent_color = Color(0.85, 0.3, 0.95, 1)
